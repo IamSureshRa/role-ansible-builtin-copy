@@ -1,0 +1,17 @@
+---
+
+- name: Copy Task
+  ansible.builtin.copy:
+    backup: "{{ item.backup | default(omit) }}"
+    content: "{{ item.content | default(omit) }}"
+    dest: "{{ item.dest }}"
+    follow: "{{ item.follow | default(omit) }}"
+    group: "{{ item.group | default(omit) }}"
+    mode: "{{ item.mode | default(omit) }}"
+    owner: "{{ item.owner | default(omit) }}"
+    remote_src: "{{ item.remote_src | default(omit) }}"
+    src: "{{ item.src | default(omit) }}"
+    validate: "{{ item.validate | default(omit) }}"
+  become: "{{ item.become | default(omit) }}"
+  delegate_to: "{{ item.delegate_to | default(omit) }}"
+  with_items: "{{ role-ansible-builtin-copy-vars }}"
