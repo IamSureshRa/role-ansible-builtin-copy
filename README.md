@@ -1,4 +1,7 @@
 # role-ansible-builtin-copy
+
+![Ansible Lint](https://github.com/IamSureshRa/role-ansible-builtin-copy/actions/workflows/ansible-lint.yml/badge.svg)
+
 Ansible Role for ansible.builtin.copy
 
 Synopsis:
